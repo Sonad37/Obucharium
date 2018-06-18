@@ -1,0 +1,2 @@
+C:\Users\Toslic\source\repos\NodejsConsoleApp2\NodejsConsoleApp2\obj\Debug\NodejsConsoleApp2.njsproj.CoreCompileInputs.cache
+C:\Users\Toslic\source\repos\NodejsConsoleApp2\NodejsConsoleApp2\bin\Microsoft.NodejsTools.WebRole.dll
