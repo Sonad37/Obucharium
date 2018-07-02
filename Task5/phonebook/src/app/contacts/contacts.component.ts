@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Person } from '../person';
+import { ContactService } from '../contact.service';
 
 @Component({
   selector: 'app-contacts',
@@ -8,17 +9,18 @@ import { Person } from '../person';
 })
 export class ContactsComponent implements OnInit {
 
-  people: Person[] = [
-    {name: 'Ilya', surname: "Petrov", number: '111111'},
-    {name: 'Ivan', surname: "Sidorov", number: '222222'},
-    {name: 'Dima', surname: "Ivanov", number: '333333'}
-  ];
+  people: Person[];
 
   selectedPerson: Person;
 
-  constructor() { }
+  constructor(private contactService: ContactService) { }
 
   ngOnInit() {
+    this.loadContacts();
+  }
+
+  loadContacts(){
+    this.people = this.contactService.getContacts();
   }
 
   onDelete(person: Person){
